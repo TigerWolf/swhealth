@@ -1,6 +1,6 @@
 Swhealth::Application.routes.draw do
   resources :categories
-
+  resources :providers
 
   authenticated :user do
     root :to => 'home#index'

@@ -1,0 +1,23 @@
+= simple_form_for(@provider) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title  
+    = f.input :name
+    = f.input :phone  
+    = f.input :fax
+    = f.input :firstName
+    = f.input :glat
+    = f.input :glong
+    = f.input :orgName
+    = f.input :orgSubType
+    = f.input :orgType
+    = f.input :postCode
+    = f.input :providerName
+    = f.input :providerNumber
+    = f.input :state
+    = f.input :suburb
+	
+
+  .form-actions
+    = f.button :submit
