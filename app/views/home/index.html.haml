@@ -1,4 +1,31 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+
+%div.splash
+  = link_to image_tag("page 1.png"), categories_path
+  %hr
+  %br
+  %h3.center Find your next health provider
+
+  %div.navigation
+    %div.segment.first
+      %label Select a category
+      %select
+        - @categories.each do |category|
+          %option #{category.name}
+    %div.segment.second
+      %label Select your health insurance...
+      %select
+        %option Bupa
+        %option Health Partners
+        %option Medibank Private
+        %option Police Health
+    %div.segment.third
+      %label Enter your Location
+      %input 
+    %div.clear  
+-#  %div.button
+-#    %button.btn.btn-warning.btn-large Search Now  
+  %div.clear  
+  %br
+  %br
+  %hr
+      

@@ -1,19 +1,27 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @provider.name
-%p 
-  %b Phone:
-  = @provider.phone
-%p
-  %b Address:
-  = @provider.address1
-%p
-  %b Practitioner:
-  = @provider.title 
-  = @provider.firstName
+
+%div.image
+  =image_tag ("http://placehold.it/250x350")
+
+%div.description
+  %p
+    %b Name:
+    = @provider.name
+  %p 
+    %b Phone:
+    = @provider.phone
+  %p
+    %b Address:
+    = @provider.address1
+  %p
+    %b Practitioner:
+    = @provider.title 
+    = @provider.firstName
 
 = link_to 'Edit', edit_provider_path(@provider)
 \|
 = link_to 'Back', providers_path
+
+%div.book
+  %button.btn Book Now

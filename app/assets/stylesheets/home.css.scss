@@ -1,3 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.segment{
+  float:left;
+  width: 340px;
+  margin: 30px 0;
+}
+
+.navigation {
+  margin-left: 130px;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  float:left;
+}
+
+.button button {
+  width: 210px;
+}
+
+.splash{ 
+  background-color: #fff;
+}
+
+.splash:after, .navigation:after //append as many as you like
+{
+ clear:both;
+ *zoom:1;
+ height:0;
+ visabilty: hidden;
+ display:block;
+}
+
+.clear{ 
+  clear:both;
+   *zoom:1;
+ height:0;
+ visabilty: hidden;
+ display:block;
+}
