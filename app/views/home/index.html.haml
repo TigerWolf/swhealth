@@ -4,28 +4,28 @@
   %hr
   %br
   %h3.center Find your next health provider
-
-  %div.navigation
-    %div.segment.first
-      %label Select a category
-      %select
-        - @categories.each do |category|
-          %option #{category.name}
-    %div.segment.second
-      %label Select your health insurance...
-      %select
-        %option Bupa
-        %option Health Partners
-        %option Medibank Private
-        %option Police Health
-    %div.segment.third
-      %label Enter your Location
-      %input 
+  %form{:method => "get",:action=>"categories"}
+    %div.navigation
+      %div.segment.first
+        %label Select a category
+        %select{:name => "category_id"}
+          - @categories.each do |category|
+            %option{ :value => category.id} #{category.name}
+      %div.segment.second
+        %label Select your health insurance...
+        %select
+          %option Bupa
+          %option Health Partners
+          %option Medibank Private
+          %option Police Health
+      %div.segment.third
+        %label Enter your Location
+        %input 
+      %div.clear  
+    %div.centerbutton
+      %button.btn.btn-warning.btn-large{:href => category_path(1)}>Search Now
     %div.clear  
--#  %div.button
--#    %button.btn.btn-warning.btn-large Search Now  
-  %div.clear  
-  %br
-  %br
-  %hr
+    %br
+    %br
+    %hr
       

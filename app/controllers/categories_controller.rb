@@ -2,6 +2,10 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+    if(params[:category_id])
+      puts params[:category_id]
+      redirect_to category_path(params[:category_id]) and return
+    end
     @categories = Category.all
 
     respond_to do |format|

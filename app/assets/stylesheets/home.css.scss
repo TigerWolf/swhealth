@@ -17,7 +17,7 @@
 }
 
 .button {
-  float:left;
+  float:right;
 }
 
 .button button {
@@ -43,4 +43,8 @@
  height:0;
  visabilty: hidden;
  display:block;
+}
+
+.centerbutton{
+  text-align: center ;
 }
