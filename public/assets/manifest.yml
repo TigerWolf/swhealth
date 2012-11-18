@@ -1,4 +1,6 @@
 ---
+4stars.jpg: 4stars-d33ac424b21e32f6d780990e2ca5f836.jpg
+4stars/index.jpg: 4stars-d33ac424b21e32f6d780990e2ca5f836.jpg
 logo.jpg: logo-3b750328b45a917cb7f643ee4dfd7d51.jpg
 logo/index.jpg: logo-3b750328b45a917cb7f643ee4dfd7d51.jpg
 logo.png: logo-53f377f46fa44055a7b6cb52c3512814.png
@@ -7,8 +9,8 @@ page 1.png: page 1-65bb568d42d7e9fb8da6a8ee4e0eafce.png
 page 1/index.png: page 1-65bb568d42d7e9fb8da6a8ee4e0eafce.png
 application.js: application-989c650f5636110f6fd980aeae2d797d.js
 application/index.js: application-989c650f5636110f6fd980aeae2d797d.js
-application.css: application-f968f70f9760a4040dd9b1df846623ce.css
-application/index.css: application-f968f70f9760a4040dd9b1df846623ce.css
+application.css: application-c69e3f7b8fc6ea8db641dede182d8fad.css
+application/index.css: application-c69e3f7b8fc6ea8db641dede182d8fad.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
 glyphicons-halflings.png: glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png

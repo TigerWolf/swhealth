@@ -8,23 +8,33 @@
   %p
     %b Name:
     = @provider.name
-  %p 
-    %b Phone:
-    = @provider.phone
-  %p
-    %b Address:
-    = @provider.address1
   %p
     %b Practitioner:
     = @provider.title 
-    = @provider.firstName
+    = @provider.firstName    
+  %p 
+    %b Phone:
+    = @provider.phone
+  %p 
+    %b Fax:
+    = @provider.fax    
+  %p
+    %b Address:
+    = @provider.address1
+  %p 
+    %b Suburb:
+    = @provider.suburb  
+  %p 
+    %b State:
+    = @provider.state  
+  %p 
+    %b Postcode:
+    = @provider.postCode             
   %hr
   %p
     %b Current Rating
     =image_tag ("4stars.jpg"),{:class => "stars"}
-  %p 
-    %b Review
-    
+
 
 
 -#= link_to 'Edit', edit_provider_path(@provider)
