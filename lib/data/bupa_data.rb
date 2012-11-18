@@ -2,13 +2,15 @@
 require 'json'
 require 'open-uri'
 
-def get_bupa_data
+def get_bupa_data(specialityCode, categoryId)
 
-array =  JSON.parse(open("http://www.bupa.com.au/BupaProvider/fap.json?search=ancillary&pageSize=1000&page=1&suburbPostcode=Rundle%20Mall,%20SA,%205000&specialtyTypes=C&originalRadius=100").read)
+
+array =  JSON.parse(open("http://www.bupa.com.au/BupaProvider/fap.json?search=ancillary&pageSize=1000&page=1&suburbPostcode=Rundle%20Mall,%20SA,%205000&specialtyTypes="+specialityCode+"&originalRadius=100").read)
 hash = array[0]
     hash['providers'].each do |provider|
         puts provider['name']
         p = Provider.create!(:name => provider['name'])
+        p.category_id = categoryId
         p.address1 = provider['address1']
         ['fax','firstName','glat','glong','orgName','orgSubType','orgType','phone','postCode','providerName','providerNumber','state','suburb','title'].each do |prov|
             p.update_attribute(prov.to_sym, provider[prov]) 
@@ -19,5 +21,8 @@ hash = array[0]
    
 end
 
-get_bupa_data
+{'C'=>'Chiropractor','D'=>'Dentist','G'=>'Living well gym','O'=>'Optical','P'=>'Physiotherapist'}.each do |specialtyType, specialtyName| # _with_index
+  c = Category.create!(:name => specialtyName)
+  get_bupa_data(specialtyType, c.id)
+end
 
