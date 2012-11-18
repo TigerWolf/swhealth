@@ -18,10 +18,18 @@
     %b Practitioner:
     = @provider.title 
     = @provider.firstName
+  %hr
+  %p
+    %b Current Rating
+    =image_tag ("4stars.jpg"),{:class => "stars"}
+  %p 
+    %b Review
+    
 
-= link_to 'Edit', edit_provider_path(@provider)
-\|
-= link_to 'Back', providers_path
+
+-#= link_to 'Edit', edit_provider_path(@provider)
+-#\|
+-#= link_to 'Back', providers_path
 
 %div.book
-  %button.btn Book Now
+  %button.btn.btn-success.btn-large Book Now
