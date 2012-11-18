@@ -80,4 +80,9 @@ class ProvidersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    @grants = Grant.search params[:search]
+  end
+  
 end
